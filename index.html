@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 12</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <!-- As a heading -->
+            <nav class="navbar bg-light">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1 ms-md-5">Nhóm 12</span>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <!-- Thanh vien -->
+            <div class="row p-5">
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-danger userlist">
+                        <div class="panel-body text-center">
+                            <div class="userprofile">
+                                <div class="userpic">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""
+                                        class="userpicimg" />
+                                </div>
+                                <h3 class="username">Võ Hoài Thương</h3>
+                            </div>
+                            <a>20133012
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-danger userlist">
+                        <div class="panel-body text-center">
+                            <div class="userprofile">
+                                <div class="userpic">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""
+                                        class="userpicimg" />
+                                </div>
+                                <h3 class="username">Huỳnh Hạo Nhị</h3>
+
+                            </div>
+                            <a>20133006
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-danger userlist">
+                        <div class="panel-body text-center">
+                            <div class="userprofile">
+                                <div class="userpic">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""
+                                        class="userpicimg" />
+                                </div>
+                                <h3 class="username">Nguyễn Chí Tâm</h3>
+
+                            </div>
+                            <a>
+                                20133087
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="panel panel-danger userlist">
+                        <div class="panel-body text-center">
+                            <div class="userprofile">
+                                <div class="userpic">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""
+                                        class="userpicimg" />
+                                </div>
+                                <h3 class="username">Trương Thị Thu Sương</h3>
+
+                            </div>
+                            <a>
+                                20133086
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+
+            <h3 class="text-center mt-4">Bài tập nhóm 12</h3>
+            <div id="rick-and-morty-characters" class="row justify-content-center">
+
+            </div>
+        </div>
+        <div class="footer">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 text-muted">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 text-muted">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 text-muted">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 text-muted">About</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const url = "https://api-ltweb-team12.herokuapp.com/api/post";
+
+        fetch("https://api-ltweb-team12.herokuapp.com/api/post")
+            .then((response) => response.json())
+            .then((data) => showCharacters(data));
+
+        showCharacters = (data) => {
+
+            const charactersDiv = document.querySelector(
+                "#rick-and-morty-characters"
+            );
+
+            data?.forEach((post) => {
+                const listPost = document.createElement("div")
+                listPost.classList.add("card", "col-lg-3", "col-md-4", "col-sm-6", "border", "p-0")
+                listPost.innerHTML = `
+                        <div div class="card__main" >
+                            <img src="${post?.images}"
+                                alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: black">${post?.title}</h5>
+                                <p class="card-text" style="color: gray">${post?.desc}</p>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="">
+                                <a href="${post?.link}" _blank=true class="link__item">Link web</a>
+                            </div>
+                            <div class="">
+                                <a href="${post?.github}" class="link__item">Link github</a>
+                            </div>
+                        </div >`
+
+                charactersDiv.append(listPost);
+            }
+            );
+        };
+    </script>
+</body>
+
+</html>
