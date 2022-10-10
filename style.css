@@ -7,7 +7,9 @@ img {
   border-radius: 20px;
   border: none;
   margin: 50px;
+  transition: all 0.5s ease-out;
 }
+
 
 .card__main > img {
   width: 100%;
@@ -18,8 +20,23 @@ img {
 .card:hover .link {
   display: flex;
   justify-content: space-around;
+  
 }
 
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.link_team {
+  display: block;
+  text-decoration: none;
+  color: #607d8b;
+  margin-top: 10px;
+}
+
+.link_team:hover {
+  color: #2e3234;
+}
 
 .link {
   display: none;
@@ -34,12 +51,14 @@ img {
   border-radius: 9px;
   padding: 10px;
   text-decoration: none;
-  background-color: #f403e4;
+  background-color: #0394f4;
   color: white;
 }
 
 .link__item:hover {
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 
 .card:hover .active {
@@ -71,7 +90,7 @@ body {
   width: 100%;
   float: left;
   clear: both;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 .userprofile .userpic {
   height: 100px;
@@ -79,7 +98,7 @@ body {
   clear: both;
   margin: 0 auto;
   display: block;
-  border-radius: 100%;
+  border-radius: 50%;
   box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
@@ -87,9 +106,8 @@ body {
   position: relative;
 }
 .userprofile .userpic .userpicimg {
-  height: auto;
-  width: 100%;
-  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 .username {
   font-weight: 400;
@@ -307,7 +325,7 @@ body {
 }
 
 .panel {
-  box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);
   -ms-box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.05);

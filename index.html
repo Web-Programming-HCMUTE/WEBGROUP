@@ -31,13 +31,12 @@
                         <div class="panel-body text-center">
                             <div class="userprofile">
                                 <div class="userpic">
-                                    <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-1/306616445_1243774503047184_5733804717293742934_n.jpg?stp=dst-jpg_p240x240&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=tbXBdRcGRb4AX8PLvwj&_nc_ht=scontent.fsgn5-13.fna&oh=00_AT-rtfUBwwiXhJ4eHwpq3FaBpA564BQAXpAFWGcFhNv2Gg&oe=63310EF7"
-                                        alt="" class="userpicimg" />
+                                    <img src="./img/thuong.jpg" alt="" class="userpicimg" />
                                 </div>
                                 <h3 class="username">Võ Hoài Thương</h3>
                             </div>
-                            <a>20133012
-                            </a>
+                            <p>20133012
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -48,14 +47,13 @@
                         <div class="panel-body text-center">
                             <div class="userprofile">
                                 <div class="userpic">
-                                    <img src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-1/298665820_586928289823738_8515931783068654771_n.jpg?stp=dst-jpg_p320x320&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=2JaIQCKkzQsAX92Paey&_nc_ht=scontent-hkt1-2.xx&oh=00_AT8d2-kvgO0SSZJmkNVNoxWYXrVIJeDcuQKKCcArQz8zrg&oe=633183D3"
-                                        alt="" class="userpicimg" />
+                                    <img src="./img/nhimatngu.jpg" alt="" class="userpicimg" />
                                 </div>
                                 <h3 class="username">Huỳnh Hạo Nhị</h3>
 
                             </div>
-                            <a>20133006
-                            </a>
+                            <p>20133006
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -66,15 +64,14 @@
                         <div class="panel-body text-center">
                             <div class="userprofile">
                                 <div class="userpic">
-                                    <img src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/278729551_2209477102549653_1154270075012668669_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=8_7SMP0wZWkAX9-kizR&_nc_ht=scontent-hkt1-2.xx&oh=00_AT-bej4FLe0sIIOgMAw4ZDoBjHK0SAh1934PN4Z5T8ngTg&oe=6331CBFC"
-                                        alt="" class="userpicimg" />
+                                    <img src="./img/chitam.jpg" alt="" class="userpicimg" />
                                 </div>
                                 <h3 class="username">Nguyễn Chí Tâm</h3>
 
                             </div>
-                            <a>
+                            <p>
                                 20133087
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -85,14 +82,13 @@
                         <div class="panel-body text-center">
                             <div class="userprofile">
                                 <div class="userpic">
-                                    <img src="./suong.jpg" alt="" class="userpicimg" width="200px" height="200px" />
+                                    <img src="./img/suong.jpg" alt="" class="userpicimg" width="200px" height="200px" />
                                 </div>
                                 <h3 class="username">Trương Thị Thu Sương</h3>
-
                             </div>
-                            <a>
+                            <p>
                                 20133086
-                            </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -100,8 +96,11 @@
             </div>
 
             <h3 class="text-center mt-4">Bài tập nhóm 12</h3>
+            <a class="text-center link_team" href="https://github.com/Web-Programming-HCMUTE" target="_blank">Link
+                github nhóm 12</a>
             <div id="rick-and-morty-characters" class="row justify-content-center">
-
+                <div id="load" style="width: 10rem; height: 10rem;" class="spinner-border m-5 text-info" role="status">
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -146,6 +145,12 @@
             const charactersDiv = document.querySelector(
                 "#rick-and-morty-characters"
             );
+
+            const loadDiv = document.querySelector(
+                "#load"
+            );
+
+            charactersDiv.removeChild(loadDiv)
 
             data?.forEach((post) => {
                 const listPost = document.createElement("div")
